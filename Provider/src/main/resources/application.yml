@@ -1,0 +1,17 @@
+dubbo:
+  application:
+    name: user-service-provider
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+    timeout: 30000
+  protocol:
+    name: dubbo
+    port: 20881
+  monitor:
+    protocol: registry
+  config-center:
+    timeout: 30000
+
+server:
+  port: 8084

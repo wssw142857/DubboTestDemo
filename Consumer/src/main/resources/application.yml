@@ -1,0 +1,19 @@
+dubbo:
+  application:
+    name: order-service-consumer
+  protocol:
+    name: dubbo
+    port: 20882
+  registry:
+    address: 127.0.0.1:2181	#注册中心地址
+    protocol: zookeeper		#注册中心协议
+    timeout: 30000			#注册中心请求超时时间 (毫秒)
+  monitor:
+    protocol: registry        #去注册中心自动发现
+  config-center:
+    timeout: 30000
+  consumer:
+    timeout: 30000
+
+server:
+  port: 8085
